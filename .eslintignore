@@ -1,0 +1,8 @@
+.next/**
+build/**
+.husky/**
+node_modules/**
+coverage/**
+.gitignore
+*.d.ts
+package.json

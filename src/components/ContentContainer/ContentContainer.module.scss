@@ -1,0 +1,13 @@
+@import '@/styles/vars';
+
+.root {
+  max-width: 1036px;
+  width: auto;
+  margin: 0 auto;
+  box-sizing: content-box;
+
+  @media (max-width: $max-tablet-size) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

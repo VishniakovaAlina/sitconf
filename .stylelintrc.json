@@ -1,0 +1,46 @@
+{
+  "extends": ["stylelint-config-recommended-scss"],
+  "plugins": ["stylelint-order", "stylelint-plugin-import"],
+  "rules": {
+    "string-quotes": "single",
+    "no-empty-first-line": true,
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9_-]+$",
+    "selector-id-pattern": "^(__)?[a-z][a-zA-Z0-9]+$",
+    "max-empty-lines": [1, { "ignore": ["comments"] }],
+    "property-no-unknown": [true, { "ignoreProperties": ["composes"] }],
+    "declaration-empty-line-before": ["always", { "except": ["after-declaration", "first-nested", "after-comment"] }],
+    "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global", "local"] }],
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["blockless-after-blockless", "after-comment"],
+        "ignoreAtRules": ["else"]
+      }
+    ],
+
+    "scss/no-global-function-names": null,
+    "scss/dollar-variable-empty-line-after": [
+      "always",
+      {
+        "except": ["last-nested", "before-dollar-variable"]
+      }
+    ],
+
+    "order/order": ["custom-properties", "dollar-variables", "declarations", "rules"],
+    "order/properties-order": [],
+
+    "plugin-import/import-as-reference": {
+      "mode": "off",
+      "lineExceptions": ["/static/**/*.*"]
+    }
+  },
+  "ignoreFiles": ["package.json", "node_modules/**/*.*", ".next/**/*.*", "build/**/*.*", "coverage/**/*.*"]
+}

@@ -1,0 +1,30 @@
+@import '@/styles/vars';
+
+.root {
+  padding: 33px 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+
+}
+
+.links {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: $text;
+    text-decoration: none;
+    margin-right: 16px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

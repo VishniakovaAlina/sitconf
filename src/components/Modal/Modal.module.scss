@@ -1,0 +1,40 @@
+.overlay {
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(29, 5, 52, 0.70);
+}
+
+.rootContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+}
+
+.content {
+  outline: none;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0 40px 40px -20px rgba(26, 0, 51, 0.30);
+}
+
+.closeButton {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  background-image: url('/img/icons/close.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+  cursor: pointer;
+}

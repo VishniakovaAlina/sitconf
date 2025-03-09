@@ -1,0 +1,22 @@
+{
+  "verbose": true,
+  "ignore": ["node_modules", ".next", "build"],
+  "watch": [
+    "public/**/*",
+    "next.config.js",
+    "src/next-i18next-client.config.js",
+    "next-i18next.config.js",
+    "src/utils/axios/axios.js",
+    "axios-server.js",
+    "babel.config.js",
+    "postcss.config.js",
+    "tsconfig.json",
+    ".eslintrc.json",
+    ".prettierrc.js",
+    ".eslintignore",
+    ".stylelintrc.json",
+    ".browserslistrc",
+    ".env"
+  ],
+  "ext": "js ts jsx tsx json"
+}

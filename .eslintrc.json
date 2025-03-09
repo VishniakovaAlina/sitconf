@@ -1,0 +1,149 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+      "rules": {
+        "storybook/hierarchy-separator": "error"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ],
+  "extends": [
+    "prettier",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:prettier/recommended",
+    "plugin:css-modules/recommended",
+    "plugin:@next/next/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["react", "css-modules", "prettier", "jest", "@typescript-eslint", "simple-import-sort"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["*.js", "*.ts", "*.tsx"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    "semi": [1, "always"],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "prefer-destructuring": [
+      "error",
+      {
+        "VariableDeclarator": {
+          "array": false,
+          "object": true
+        },
+        "AssignmentExpression": {
+          "array": false,
+          "object": false
+        }
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "args": "none", "varsIgnorePattern": "^_" }],
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 140
+      }
+    ],
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "jsx-a11y/heading-has-content": "off",
+    "react/require-default-props": "off",
+    "css-modules/no-unused-class": [0, { "camelCase": true }],
+    "css-modules/no-undef-class": [0, { "camelCase": true }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/prefer-stateless-function": "off",
+    "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
+    "react/no-danger": "off",
+    "camelcase": "off",
+    "react/no-array-index-key": "off",
+    "import/prefer-default-export": "off",
+    "max-len": "off",
+    "import/order": 0,
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Packages. `react` related packages come first.
+          ["^react", "^\\w", "^@[^//]"],
+          // Public
+          ["^@public\\/"],
+          // Internal packages.
+          ["^@/"],
+          // common types
+          ["^@/types"],
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$", "^\\./?.types$"],
+          // Style imports.
+          ["^.+\\.s?css$"]
+        ]
+      }
+    ],
+    "react/function-component-definition": [
+      "warn",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "no-restricted-exports": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state", "req"]
+      }
+    ],
+    "no-shadow": "off",
+    "no-restricted-syntax": ["error", "IfStatement > ExpressionStatement > AssignmentExpression"],
+    "nonblock-statement-body-position": ["error", "below"],
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-explicit-any": ["warn", { "ignoreRestArgs": false }],
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/triple-slash-reference": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/destructuring-assignment": "off",
+    "@next/next/no-img-element": "off"
+  },
+  "globals": {
+    "shallow": true,
+    "context": true,
+    "expect": true,
+    "jsdom": true,
+    "JSX": true,
+    "cn": "readonly"
+  }
+}

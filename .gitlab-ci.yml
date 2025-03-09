@@ -1,0 +1,4 @@
+include:
+  - project: 'datsteam/ops/deploy'
+    ref: master
+    file: 'cryptolut-front/.gitlab-ci.yml'

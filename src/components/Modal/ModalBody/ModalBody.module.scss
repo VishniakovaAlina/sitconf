@@ -1,0 +1,14 @@
+@import '@/styles/vars';
+
+.root {
+  color: #2C0751;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  @media (max-width: $max-phone-size) {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

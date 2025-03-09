@@ -1,0 +1,11 @@
+@import '@/styles/vars';
+
+.root {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 83px;
+  color: $text-white;
+  margin-bottom: 15px;
+}

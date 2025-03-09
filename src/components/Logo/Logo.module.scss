@@ -1,0 +1,15 @@
+@import '@/styles/vars';
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 192px;
+  height: 27px;
+
+  @media (max-width: $max-tablet-size) {
+    width: 96px;
+    height: 13px;
+  }
+}
