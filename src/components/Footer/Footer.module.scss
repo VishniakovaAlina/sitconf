@@ -1,1 +1,29 @@
 @import '@/styles/vars';
+
+.root {
+  background: #2E5E77;
+  padding: 60px 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+
+}
+
+.links {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin-right: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

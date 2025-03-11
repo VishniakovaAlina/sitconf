@@ -3,3 +3,57 @@
 .root {
   margin: 0 auto;
 }
+
+.container {
+  margin-top: 100px;
+  padding: 23px;
+  position: relative;
+  margin-bottom: 8px;
+
+  img {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    margin-top: -30px;
+  }
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  color: $title;
+  font-size: 32px;
+  padding-right: 82px;
+  margin-bottom: 266px;
+
+  h4 {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $white-text;
+
+  h1 {
+    font-size: 58px;
+    line-height: 100%;
+  }
+
+  p {
+    font-size: 20px;
+    width: 44%;
+  }
+}
+
