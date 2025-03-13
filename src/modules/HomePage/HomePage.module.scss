@@ -57,3 +57,45 @@
   }
 }
 
+.conferences {
+  margin: 73px 0 100px 0;
+  h4 {
+    padding: 7px 12px;
+    font-size: 32px;
+    line-height: 96%;
+    font-weight: 250;
+  }
+  &_container {
+    display: flex;
+    padding: 32px 0;
+  }
+}
+
+.blue_line {
+  min-height: 8px;
+  color: $white-text;
+  background-color: $title;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: -$blue-line-height;
+    left: 0;
+    content: "";
+    display: block;
+    width: calc(100% - $blue-line-margin*2);
+    height: $blue-line-height;
+    margin: 0 $blue-line-margin;
+    background-color: $title;
+  }
+  &:after {
+    position: absolute;
+    bottom: -$blue-line-height;
+    left: 0;
+    content: "";
+    display: block;
+    width: calc(100% - $blue-line-margin*2);
+    height: $blue-line-height;
+    margin: 0 $blue-line-margin;
+    background-color: $title;
+  }
+}
