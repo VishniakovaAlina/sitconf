@@ -1,0 +1,44 @@
+@import '@/styles/vars';
+
+.conference {
+  font-weight: 250;
+
+  p {
+    margin: 16px 0;
+    letter-spacing: -4%;
+    font-size: 18px;
+    line-height: 96%;
+  }
+  h1 > p {
+    margin: 0;
+    font-weight: 250;
+    font-size: 87px;
+    line-height: 67%;
+    word-break: keep-all;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font-weight: 250;
+    font-size: 30.27px;
+    line-height: 67%;
+    color: $text;
+    text-transform: lowercase;
+    text-decoration: none;
+    svg {
+      margin-right: 9px;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  margin: 16px 0;
+  color: $title;
+  div {
+    text-decoration: underline;
+    margin-right: 16px;
+  }
+}
