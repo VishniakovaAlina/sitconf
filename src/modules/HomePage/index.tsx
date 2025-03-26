@@ -10,6 +10,44 @@ import { meta } from '@/constants/meta';
 
 import styles from './HomePage.module.scss';
 
+const previousConferences = [
+  {
+    name: 'Management',
+    date: '26 октября',
+    place: 'Коворкинг Yellow Rockets',
+    description:
+      'SITConf Management - это конференция для руководителей, тимлидов и тех, кто стремится ими стать. Здесь вы сможете обменяться опытом с коллегами и познакомиться с крутанами',
+    link: '#',
+  },
+  {
+    name: 'QA',
+    date: '26 октября',
+    place: 'Коворкинг Yellow Rockets',
+    description:
+      'SITConf QA - это конференция QA-инженеров, автотестеров и всех, кто стремится глубже погрузиться в мир качества. Здесь вы можете обменяться опытом с коллегами',
+    link: '#',
+  },
+];
+
+const nextConferences = [
+  {
+    name: 'Management',
+    date: '26 октября',
+    place: 'Коворкинг Yellow Rockets',
+    description:
+      'SITConf Management - это конференция для руководителей, тимлидов и тех, кто стремится ими стать. Здесь вы сможете обменяться опытом с коллегами и познакомиться с крутанами',
+    link: '#',
+  },
+  {
+    name: 'QA',
+    date: '26 октября',
+    place: 'Коворкинг Yellow Rockets',
+    description:
+      'SITConf QA - это конференция QA-инженеров, автотестеров и всех, кто стремится глубже погрузиться в мир качества. Здесь вы можете обменяться опытом с коллегами',
+    link: '#',
+  },
+];
+
 const HomePage = () => {
   const { title, description } = meta.home;
 
@@ -40,22 +78,9 @@ const HomePage = () => {
             <h4>Предстоящие конференции</h4>
           </div>
           <div className={styles.conferences_container}>
-            <Conference
-              name="Management"
-              date="26 октября"
-              place="Коворкинг Yellow Rockets"
-              description="SITConf Management - это конференция для руководителей, тимлидов и тех, кто стремится ими стать. Здесь вы сможете обменяться
-              опытом с коллегами и познакомиться с крутанами"
-              link="#"
-            />
-            <Conference
-              name="QA"
-              date="26 октября"
-              place="Коворкинг Yellow Rockets"
-              description="SITConf QA - это конференция QA-инженеров, автотестеров и всех, кто стремится глубже погрузиться в мир качества. Здесь вы
-              можете обменяться опытом с коллегами"
-              link="#"
-            />
+            {nextConferences.map((el) => (
+              <Conference {...el} />
+            ))}
           </div>
           <div className={styles.blue_line} />
         </div>
@@ -66,22 +91,9 @@ const HomePage = () => {
             <h4>Прошедшие конференции</h4>
           </div>
           <div className={styles.conferences_container}>
-            <Conference
-              name="Management"
-              date="26 октября"
-              place="Коворкинг Yellow Rockets"
-              description="SITConf Management - это конференция для руководителей, тимлидов и тех, кто стремится ими стать. Здесь вы сможете обменяться
-              опытом с коллегами и познакомиться с крутанами"
-              link="#"
-            />
-            <Conference
-              name="QA"
-              date="26 октября"
-              place="Коворкинг Yellow Rockets"
-              description="SITConf QA - это конференция QA-инженеров, автотестеров и всех, кто стремится глубже погрузиться в мир качества. Здесь вы
-              можете обменяться опытом с коллегами"
-              link="#"
-            />
+            {previousConferences.map((el) => (
+              <Conference {...el} />
+            ))}
           </div>
           <div className={styles.blue_line} />
         </div>
